@@ -38,5 +38,22 @@
     "import-account": "node cli/import-account.mjs",
     "test": "node test/selftest.mjs",
     "admin": "node -e \"const t=require('fs').readFileSync(process.env.DSH_HOME?process.env.DSH_HOME+'/dsh-web-proxy/admin.token':'secrets/admin.token','utf8').trim();console.log('http://127.0.0.1:8787/admin?token='+t)\""
-  }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "openai-compatible",
+    "anthropic",
+    "llm-gateway"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keb-ght/dsh-web-proxy.git"
+  },
+  "homepage": "https://github.com/keb-ght/dsh-web-proxy#readme",
+  "bugs": {
+    "url": "https://github.com/keb-ght/dsh-web-proxy/issues"
+  },
+  "author": "keb-ght"
 }
