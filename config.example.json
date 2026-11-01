@@ -1,0 +1,13 @@
+{
+  "host": "127.0.0.1",
+  "port": 8787,
+  "apiKeys": [],
+  "rateLimitPerMinute": 12,
+  "powRefreshMarginMs": 60000,
+  "browser": {
+    "enabled": false,
+    "cdpUrl": "http://127.0.0.1:9222",
+    "channel": "chrome",
+    "headless": false
+  }
+}
