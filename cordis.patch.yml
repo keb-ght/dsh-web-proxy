@@ -1,0 +1,5 @@
+# dsh-web-proxy —— DSH bundle patch
+# 把反代插件插入 Web profile 的配置树（插件页可见）
+- insert:
+    - id: dsh-web-proxy
+      name: dsh-web-proxy
