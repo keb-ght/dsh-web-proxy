@@ -1,0 +1,42 @@
+{
+  "name": "dsh-web-proxy",
+  "version": "0.2.0",
+  "description": "DeepSeek 网页版反代（DSH 插件）：账号池 + PoW + OpenAI/Anthropic 双协议 + 工具调用",
+  "type": "module",
+  "main": "lib/index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "dsp",
+    "assets",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "node dsp/server.mjs",
+    "fetch-assets": "node scripts/fetch-assets.mjs",
+    "import-account": "node cli/import-account.mjs",
+    "test": "node test/selftest.mjs",
+    "admin": "node -e \"const t=require('fs').readFileSync(process.env.DSH_HOME?process.env.DSH_HOME+'/dsh-web-proxy/admin.token':'secrets/admin.token','utf8').trim();console.log('http://127.0.0.1:8787/admin?token='+t)\""
+  }
+}
